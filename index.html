@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html lang="en-EN">
+    <head>
+    <meta charset="UTF-8" />
+    <title>Vanilla Move Blocks</title>
+    <script src="js/script.js"></script>
+    <script src="js/vanilla-moveblocks.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+    </head>
+    <body>
+        <h1>Vanilla Move Blocks</h1>
+        <script class="script-visible" contenteditable>window.domReady(function scrollanimdomready(){
+    new vanillaMoveBlocks(document.getElementById('myblock'));
+});
+</script>
+        <h2>Desktop here</h2>
+        <div id="myblock" data-vmbtargets='{"768":".mobile-here", "1024":".tablet-here"}'>content is here</div>
+        <h2>Tablet here</h2>
+        <div class="tablet-here"></div>
+        <h2>Mobile here</h2>
+        <div class="mobile-here"></div>
+    </body>
+</html>
