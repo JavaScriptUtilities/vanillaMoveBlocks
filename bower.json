@@ -1,0 +1,27 @@
+{
+    "name": "vanilla-moveblocks",
+    "version": "0.2.1",
+    "description": "Move Blocks",
+    "main": "js/vanilla-moveblocks.js",
+    "authors": [
+        "Darklg"
+    ],
+    "license": "MIT",
+    "keywords": [
+        "js"
+    ],
+    "homepage": "https://github.com/JavaScriptUtilities/vanillaMoveBlocks",
+    "ignore": [
+        "**/*.css",
+        "**/.*",
+        ".*",
+        "bower.json",
+        "grunt/*",
+        "Gruntfile.js",
+        "index.html",
+        "js/script.js",
+        "LICENSE",
+        "package.json",
+        "README.md"
+    ]
+}
