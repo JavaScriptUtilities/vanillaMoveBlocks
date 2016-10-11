@@ -1,6 +1,6 @@
 /*
  * Plugin Name: Vanilla-JS Move Blocks
- * Version: 0.2.1
+ * Version: 0.2.2
  * Plugin URL: https://github.com/Darklg/JavaScriptUtilities
  * JavaScriptUtilities Vanilla-JS may be freely distributed under the MIT license.
  */
@@ -28,6 +28,10 @@ var vanillaMoveBlocks = function(el) {
 
     /* Wrap an item */
     var wrapEl = function(item) {
+        var tmpClassname = 'vmb-wrapper';
+        if (el.getAttribute('vmbwrapperclassname')) {
+            tmpClassname = el.getAttribute('vmbwrapperclassname');
+        }
         wrapper = document.createElement('div');
         wrapper.className = 'vmb-wrapper';
         item.parentNode.insertBefore(wrapper, item);
