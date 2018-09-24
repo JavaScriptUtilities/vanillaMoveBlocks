@@ -10,19 +10,26 @@
     <body>
         <h1>Vanilla Move Blocks</h1>
         <p>The block is automagically moved to a different (defined)position when changing resolutions.</p>
-        <script class="script-visible" contenteditable>window.domReady(function scrollanimdomready(){
-    new vanillaMoveBlocks(document.getElementById('myblock'));
-});
-</script>
+
         <div class="script-visible">&lt;div
     data-vmbtargets='{&quot;768&quot;:&quot;.mobile-here&quot;, &quot;1024&quot;:&quot;.tablet-here&quot;}'
     data-vmbwrapperclassname='wrapper-block'
     id=&quot;myblock&quot;&gt;
     content is here
 &lt;/div&gt;</div>
+        <script class="script-visible" contenteditable>window.domReady(function scrollanimdomready(){
+    // Default block
+    new vanillaMoveBlocks(document.getElementById('myblock'));
 
+    // Block with arguments
+    new vanillaMoveBlocks(document.getElementById('myblock2'),{
+        targets: {"768":".mobile-here", "1024":".tablet-here"}
+    });
+});
+</script>
         <h2>Desktop here</h2>
         <div id="myblock" data-vmbtargets='{"768":".mobile-here", "1024":".tablet-here"}'>content is here</div>
+        <div id="myblock2">content is here too</div>
         <h2>Tablet here</h2>
         <div class="tablet-here"></div>
         <h2>Mobile here</h2>

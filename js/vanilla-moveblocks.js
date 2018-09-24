@@ -1,15 +1,20 @@
 /*
  * Plugin Name: Vanilla-JS Move Blocks
- * Version: 0.2.2
+ * Version: 0.2.3
  * Plugin URL: https://github.com/Darklg/JavaScriptUtilities
  * JavaScriptUtilities Vanilla-JS may be freely distributed under the MIT license.
  */
 
-var vanillaMoveBlocks = function(el) {
+var vanillaMoveBlocks = function(el, settings) {
     'use strict';
+
+    settings = typeof settings == 'object' ? settings : {};
+
     var self = this,
         currentPos = 10000,
         posLength = 0,
+        _tmpClassname = settings.tmpClassname || 'vmb-wrapper',
+        _targets = settings.targets || {},
         resizeTimeout = false,
         wrapper = false,
         winWidth = 0,
@@ -28,7 +33,6 @@ var vanillaMoveBlocks = function(el) {
 
     /* Wrap an item */
     var wrapEl = function(item) {
-        var tmpClassname = 'vmb-wrapper';
         if (el.getAttribute('vmbwrapperclassname')) {
             tmpClassname = el.getAttribute('vmbwrapperclassname');
         }
@@ -40,12 +44,14 @@ var vanillaMoveBlocks = function(el) {
 
     /* Extract positions */
     self.extractPositions = function() {
-        var tmpPos = JSON.parse(el.getAttribute('data-vmbtargets'));
+        if(el.getAttribute('data-vmbtargets')){
+            _targets = JSON.parse(el.getAttribute('data-vmbtargets'));
+        }
         /* Extract positions */
-        for (var pos in tmpPos) {
+        for (var pos in _targets) {
             positions.push({
                 breakpoint: parseInt(pos, 10),
-                target: document.querySelector(tmpPos[pos]),
+                target: document.querySelector(_targets[pos]),
             });
         }
         /* Add main position */
