@@ -1,6 +1,6 @@
 /*
  * Plugin Name: Vanilla-JS Move Blocks
- * Version: 0.2.3
+ * Version: 0.2.4
  * Plugin URL: https://github.com/Darklg/JavaScriptUtilities
  * JavaScriptUtilities Vanilla-JS may be freely distributed under the MIT license.
  */
@@ -9,6 +9,10 @@ var vanillaMoveBlocks = function(el, settings) {
     'use strict';
 
     settings = typeof settings == 'object' ? settings : {};
+
+    if (!el) {
+        return false;
+    }
 
     var self = this,
         currentPos = 10000,
@@ -44,7 +48,7 @@ var vanillaMoveBlocks = function(el, settings) {
 
     /* Extract positions */
     self.extractPositions = function() {
-        if(el.getAttribute('data-vmbtargets')){
+        if (el.getAttribute('data-vmbtargets')) {
             _targets = JSON.parse(el.getAttribute('data-vmbtargets'));
         }
         /* Extract positions */

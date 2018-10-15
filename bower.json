@@ -1,6 +1,6 @@
 {
     "name": "vanilla-moveblocks",
-    "version": "0.2.3",
+    "version": "0.2.4",
     "description": "Move Blocks",
     "main": "js/vanilla-moveblocks.js",
     "authors": [
