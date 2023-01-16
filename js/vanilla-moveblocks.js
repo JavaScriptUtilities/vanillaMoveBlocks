@@ -1,6 +1,6 @@
 /*
  * Plugin Name: Vanilla-JS Move Blocks
- * Version: 0.3.1
+ * Version: 0.3.2
  * Plugin URL: https://github.com/Darklg/JavaScriptUtilities
  * JavaScriptUtilities Vanilla-JS may be freely distributed under the MIT license.
  */
