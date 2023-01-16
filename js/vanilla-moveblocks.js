@@ -1,11 +1,11 @@
 /*
  * Plugin Name: Vanilla-JS Move Blocks
- * Version: 0.3.0
+ * Version: 0.3.1
  * Plugin URL: https://github.com/Darklg/JavaScriptUtilities
  * JavaScriptUtilities Vanilla-JS may be freely distributed under the MIT license.
  */
 
-var vanillaMoveBlocks = function(el, settings) {
+window.vanillaMoveBlocks = function(el, settings) {
     'use strict';
 
     settings = typeof settings == 'object' ? settings : {};

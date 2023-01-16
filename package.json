@@ -3,22 +3,21 @@
     "version": "0.3.0",
     "description": "",
     "license": "MIT",
-    "devDependencies":
-    {
-        "grunt": "^1.0.1",
-        "grunt-contrib-jshint": "^1.0.0",
-        "grunt-contrib-uglify": "^1.0.1",
-        "load-grunt-config": "^0.19.2"
+    "files": [
+        "js/vanilla-moveblocks.js",
+        "js/vanilla-moveblocks.min.js"
+    ],
+    "devDependencies": {
+        "del": "^6.0.0",
+        "gulp": "^4.0.2",
+        "gulp-minify": "^3.1.0"
     },
-    "scripts":
-    {},
-    "repository":
-    {
+    "scripts": {},
+    "repository": {
         "type": "git",
         "url": "git+https://github.com/JavaScriptUtilities/vanillaMoveBlocks.git"
     },
-    "bugs":
-    {
+    "bugs": {
         "url": "https://github.com/JavaScriptUtilities/vanillaMoveBlocks/issues"
     },
     "homepage": "https://github.com/JavaScriptUtilities/vanillaMoveBlocks#readme"
